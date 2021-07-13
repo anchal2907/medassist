@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Needy-Dash</title>
+     <!-- Bootstrap CSS -->
+     <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+     <script src="js/jquery-1.8.2.min.js"></script>
+     <script type=text/javascript>
+        function logout() {
+          localStorage.removeItem("kuchbhi");
+          location.href="index.html"
+        }
+     </script>
+</head>
+<body>
+    <br>
+    <br>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <div class="card border-dark">
+          <img src="pics/needy-profile.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+          <div class="card-body" style="padding-top: 45px; padding-bottom: 30px;">
+            <center><a href="needy-details.html" class="btn btn-primary btn-lg">Profile</a></center>
+            
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-dark" >
+          <img src="pics/med-finder.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+          <div class="card-body" style="padding-top: 30px; padding-bottom: 30px;">
+            <center><a href="med-finder.html" class="btn btn-primary btn-lg">Med Finder</a></center>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-dark" >
+          <img src="pics/user-logout.png" class="card-img-top" alt="..." style="border-radius: 50%;">
+          <div class="card-body" style="padding-top: 30px; padding-bottom: 30px;">
+            <center><a href="index.html" class="btn btn-primary btn-lg" onclick="logout();">Logout</a></center>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script type=text/javascript>
+
+        function showpreview(file){
+
+            if (file.files && file.files[0]) {
+                    var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#prev').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(file.files[0]);
+            }
+        }
+    </script>
+    <script type=text/javascript>
+        function dofillId() {
+            var u=localStorage.getItem("kuchbhi");
+              alert(u);
+              $("#email").val(u);
+        }
+    </script>
+
+    <title>Provider profile</title>
+  </head>
+  <body onload="dofillId();">
+      <br>
+      <br>
+        <div class="container">
+            <div class="row bg-danger">
+                <div class="col-md-12 text-white">
+                    <center>
+                        <h2>Profile Details</h2>
+                    </center>
+                </div>
+            </div>
+
+            <hr>
+      <form method="POST" enctype="multipart/form-data">
+
+            <div class="row">
+                <div class="col-md-5">
+                    <label class="form-label"> Email ID</label>
+                    <input type="text" class="form-control"  placeholder="Enter Email ID" name="email" id="email" readonly>
+                    
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label"> </label>
+                    <button type="button" class="btn btn-secondary" id="search" name="search" hidden>Search</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-5">
+                    <label class="form-label"> Name</label>
+                    <input type="text" class="form-control"  placeholder="Enter name" name="name" id="name">
+                    
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <label class="form-label"> Contact</label>
+                    <input type="text" class="form-control"  placeholder="Enter Contact number" name="contact" id="contact">
+                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-5">
+                    <label class="form-label">Address</label>
+                    <input type="text" class="form-control"  placeholder="Enter address" name="address" id="address">
+                    
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <label class="form-label"> City</label>
+                    <input type="text" class="form-control"  placeholder="Enter City" name="city" id="city">
+                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-5">
+                    <label class="form-label"> Aadhar Card number</label>
+                    <input type="text" class="form-control"  placeholder="Enter aadhar no." name="acardno" id="acardno">
+                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="mb-3 col-md-5">
+                    <label for="formFile" class="form-label">Upload Profile Pic</label>
+                    <input class="form-control" type="file" id="picname" onchange="showpreview(this);" name="picname">
+                    <br>
+                    <img src="" width="200px" height="200px" id="prev">
+                  </div>
+                  
+            </div>
+        
+        <br>
+        <div class="container">
+            <center>
+            <input class="btn btn-primary" type="submit" value="Save" formaction="/save-profile">
+            <input class="btn btn-primary" type="submit" value="Update" formaction="/update-profile">
+            </center>
+        </div>
+
+    </form>
+        <hr>
+        <hr>
+
+    </div>
+  </body>

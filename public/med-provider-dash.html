@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script>
+      $(document).ready(function(){
+       
+        $("#profile").click(function(){
+         
+          window.location="provider-profile.html";
+        })
+      })
+    </script>
+   <script type=text/javascript>
+    function logout() {
+      localStorage.removeItem("kuchbhi");
+      location.href="index.html"
+    }
+ </script>
+
+    <title>Provider-Dash</title>
+  </head>
+  <body>
+      <br>
+      <br>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-3">
+        <div class="card border-dark" >
+            <img src="pics/imagescopy.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+            <div class="card-body" style="padding-top: 30px; padding-bottom: 30px;">
+              <!-- <center><a href="provider-profile.html" class="btn btn-primary btn-lg">Profile</a></center> -->
+              <center><input class="btn btn-primary btn-lg" type="button" value="profile" id="profile"></center>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-dark" >
+            <img src="pics/medicine.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+            <div class="card-body" style="padding-top: 30px; padding-bottom: 30px;">
+              <center><a href="med-avail.html" class="btn btn-primary btn-lg">Avail Medicine</a></center>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-dark" >
+            <img src="pics/medical-emergency-manager-flat-square-icon-vector-7491100.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+            <div class="card-body" style="padding-top: 30px; padding-bottom: 30px;">
+              <center><a href="med-manager.html" class="btn btn-primary btn-lg">Medicine Manager</a></center>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-dark" >
+            <img src="pics/user-logout.png" class="card-img-top" alt="..." style="border-radius: 50%;">
+            <div class="card-body" style="padding-top: 30px; padding-bottom: 30px;">
+              <center><a href="index.html" class="btn btn-primary btn-lg" onclick="logout();">Logout</a></center>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+   
+
+    
+  </body>
+</html>
